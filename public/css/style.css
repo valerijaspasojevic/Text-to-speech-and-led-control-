@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #424242;
+}
+
+h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h4 {
+  margin: 15px 0;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+
+textarea {
+  border: 1px solid #BFBFBF;
+  height: 200px;
+  width: 100%;
+  font-size: 13px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+  margin-bottom: 20px;
+  width: 20px;
+}
+
+.button {
+  border: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.green {
+  background: #1CC00B;
+}
+
+.green:hover,
+.green:focus {
+  background: #1C9D0B;
+}
+
+.red {
+  background: #FF0034;
+}
+
+.red:hover,
+.red:focus {
+  background: #C40034;
+}

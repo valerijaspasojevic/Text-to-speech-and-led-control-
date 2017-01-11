@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arduino and text to speech</title>
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+  <script src="/js/jquery-2.1.1.min.js"></script>
+  <script src="/js/demo.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="col-sm-12">
+          <h2>Text to speech</h1>
+          <textarea id="text"></textarea>
+        </div>
+
+        <div class="col-sm-6">
+          <input
+            onclick="responsiveVoice.speak($('#text').val(), 'Serbian Male', {pitch: 2, rate: 0.2});"
+            type="button"
+            value="Play"
+            class="button green"
+          />
+        </div>
+        <div class="col-sm-6">
+          <input
+            onclick="responsiveVoice.cancel()"
+            type="button"
+            value="Stop"
+            class="button red"
+          />
+        </div>
+
+        <div class="col-sm-6" style="margin-top: 20px">
+          <input
+            onclick="responsiveVoice.resume()"
+            type="button"
+            value="Continue"
+            class="button green"
+          />
+        </div>
+        <div class="col-sm-6" style="margin-top: 20px">
+          <input
+            onclick="responsiveVoice.pause()"
+            type="button"
+            value="Pause"
+            class="button red"
+          />
+        </div>
+
+        <div class="col-sm-12">
+          <h2>Fast response</h1>
+          <div class="row">
+            <div class="col-sm-12">
+              <input type="radio" onclick="responsiveVoice.speak(('Hello'), 'Serbian Male', {pitch: 2, rate: 0.2});" name="fast-response">
+              <label>Hello</label>
+            </div>
+
+            <div class="col-sm-12">
+              <input type="radio" onclick="responsiveVoice.speak(('How are you?'), 'Serbian Male', {pitch: 2, rate: 0.2});" name="fast-response">
+              <label>How are you?</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="col-sm-12">
+          <h2>LED CONTROL</h1>
+          <h4>Eye #1</h4>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="led" id="ledOnLeftEye">
+          <label>All</label>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="led" id="ledBlinkLeftEye">
+          <label>Blink</label>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="led" id="offLeftEye">
+          <label>Off</label>
+        </div>
+
+        <div class="col-sm-12">
+          <h4>Eye #2</h4>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="led2" id="ledOnRightEye">
+          <label>All</label>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="led2" id="ledRandomRightEye">
+          <label>Random</label>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="led2" id="offRightEye">
+          <label>Off</label>
+        </div>
+
+        <div class="col-sm-12">
+          <h4>Mouth</h4>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="led3" id="mouthAll">
+          <label>All</label>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="led3" id="happyMouth">
+          <label>Happy</label>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="led3" id="sadMouth">
+          <label>Sad</label>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="led3" id="offMouth">
+          <label>Off</label>
+        </div>
+
+        <div class="col-sm-12">
+          <h2>Eyebrows (motor control)</h1>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="eyebrows" id="happyEyebrows">
+          <label>Happy</label>
+        </div>
+
+        <div class="col-sm-3">
+          <input type="radio" name="eyebrows" id="sadEyebrows">
+          <label>Sad</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
