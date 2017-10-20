@@ -7,12 +7,10 @@ This program is created for humanoid robot "Digi", who was created for the campa
 
 2. Plug arduino in usb port
 
-3. Upload sketch.ino into arudino
+3. Upload ``sketch.ino`` into arudino
 
 4. Add arduino device and change PORT in ``app.js``
 
-5. In terminal locate your folder and type
+5. In terminal locate your folder and type ```node app.js```
 
-```node app.js```
-
-
+🎉 Enjoy!
