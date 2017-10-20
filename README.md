@@ -12,5 +12,3 @@ This program is created for humanoid robot "Digi", who was created for the campa
 4. Add arduino device and change PORT in ``app.js``
 
 5. In terminal locate your folder and type ```node app.js```
-
-🎉 Enjoy!
